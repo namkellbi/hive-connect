@@ -1,13 +1,13 @@
-package fpt.edu.service;
+package fpt.edu.servicescheduler;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServiceApplication {
+public class ServiceSchedulerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceApplication.class, args);
+        SpringApplication.run(ServiceSchedulerApplication.class, args);
     }
 
 }
