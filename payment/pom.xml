@@ -3,18 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.7</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>fpt.edu</groupId>
+        <artifactId>hive-connect</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>fpt.edu</groupId>
+
     <artifactId>payment</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>payment</name>
-    <description>payment</description>
+
     <properties>
-        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -32,8 +30,28 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.6.RELEASE</version>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>fpt.edu.payment.PaymentApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
